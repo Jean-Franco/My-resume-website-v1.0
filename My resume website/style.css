@@ -1,0 +1,456 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    background-color: gray;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    font-size: 16px;
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background-color: darkslateblue;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin-left: 30px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+  }
+  
+  /* Main Content */
+  main {
+    padding: 80px 40px;
+  }
+  
+  .section {
+    background-color: white;
+    margin: 30px 0;
+    padding: 80px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  /* About Me Section */
+
+
+  #about {
+    background-color: #f0f4f8;
+  }
+  #about {
+    background-color: #f0f4f8;
+    padding: 60px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+  }
+  
+  #about h2 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #about p {
+    font-size: 1.125rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  #about .resume {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: darkslateblue;
+    color: white;
+    text-decoration: none;
+    font-size: 1.125rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  #about .resume:hover {
+    background-color: rgb(110, 93, 216);
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  #about .resume:active {
+    background-color: rgb(99, 84, 202);
+  }
+  
+  /* Education Section */
+
+  #education {
+    background-color: #f4f9f4;
+  }
+
+  #education .education-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #education .text {
+    flex: 1;  /* The text will take up the available space */
+    padding-right: 20px;  /* Add space between text and images */
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.8;
+  }
+  
+  #education .images {
+    display: flex;
+    gap: 20px;  /* Space between the images */
+    margin-right: -50px;
+  }
+  
+  #education .images img {
+    width: 330px; /* You can adjust the width of the images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: adds rounded corners to the images */
+    transition: transform 0.3s ease;
+  }
+
+  #education .images img:hover{
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  /* Work Section */
+
+  #work {
+    background-color: #e9f7f6;
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.8;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .work-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  .work-text {
+    flex: 1 1 60%; /* Allow the text to take more space */
+  }
+
+  .work-images {
+    flex: 1 1 35%; /* Give the images slightly less space */
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping of images if necessary */
+  }
+
+  .work-item {
+    margin-bottom: 20px; /* Add space between work items */
+  }
+
+  .work-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .work-item .dates {
+    font-size: 1rem;
+    color: #007bff;
+    font-weight: normal;
+  }
+
+  .work-images img {
+    width: 100%;
+    max-width: 200px; /* Set maximum width for images */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .work-images img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+
+
+  /* Languages Section */
+
+  #languages{
+    background-color: #f9f9f9;
+  }
+
+  .languages-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 280px;
+  }
+
+  .language-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .language-item:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  }
+
+  .language-item i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+
+  .language-info {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .language-progress {
+    width: 100%;
+    height: 10px;
+    background-color: #e1e7f1;
+    border-radius: 5px;
+  }
+
+  .progress-bar {
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  .fluent {
+    width: 100%; /* Fully filled for fluent */
+    background-color: #28a745; /* Green for fluent */
+  }
+
+  .intermediate {
+    width: 75%; /* 60% filled for intermediate */
+    background-color: #e0e00b; /* Yellow for intermediate */
+  }
+
+  /* Hard Skills Section */
+  
+  #hard-skills{
+    background-color: #f4f9f4;
+  }
+
+  #hard-skills {
+    background-color: #f4f9f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .hard-skills-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .skills-list {
+    flex: 1;
+    font-size: 1.125rem;
+    color: #555;
+  }
+  
+  .skills-category {
+    margin-bottom: 30px;
+  }
+  
+  .skills-category h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .skills-category ul {
+    list-style-type: none;
+  }
+  
+  .skills-category li {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+  }
+  
+  .skills-logos {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: flex-start;
+  }
+  
+  .logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .logo-container img {
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .logo-container img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+
+  /* Soft Skills Section */
+
+  #soft-skills {
+    background-color: #f5f8ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  #soft-skills h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .soft-skills-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .soft-skills-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+  }
+  
+  .soft-skills-list .skill {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .soft-skills-list .skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .soft-skills-list .skill i {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .soft-skills-list .skill h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .soft-skills-list .skill p {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .section.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: row; /* Stack the icons horizontally */
+    align-items: flex-end; /* Align the icons to the right */
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: darkslateblue;
+    color: white;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  
