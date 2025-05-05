@@ -280,14 +280,14 @@
     border-radius: 5px;
   }
 
-  .fluent {
+  .native {
     width: 100%; /* Fully filled for fluent */
     background-color: #28a745; /* Green for fluent */
   }
 
-  .intermediate {
-    width: 75%; /* 60% filled for intermediate */
-    background-color: #e0e00b; /* Yellow for intermediate */
+  .fluent {
+    width: 98%; /* 60% filled for intermediate */
+    background-color: #55db11; /* Yellow for intermediate */
   }
 
   /* Hard Skills Section */
